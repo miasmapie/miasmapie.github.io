@@ -1,0 +1,284 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font: inherit;
+}
+
+html {
+  background: url(./images/conecta-sus-print.jpegs);
+  background-position: center -35px;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  height: 100%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1em;
+  height: 100%;
+}
+
+.container {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+.modal-load {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #00000080;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+.modal-load .content {
+  width: 75px;
+  height: 75px;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal-load .content .load {
+  width: 20px;
+  height: 20px;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  border-bottom-color: #006fcf;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.main-header {
+  padding: 0.4rem 0 1.5rem;
+  border-radius: 0 0 1.5rem 1.5rem;
+  background-color: #ecf3fa;
+}
+.main-header .user-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-header .user-bar h1 {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.main-header .user-bar p {
+  font-size: 0.9rem;
+  line-height: 140%;
+  color: #333;
+}
+.main-header .user-bar img {
+  width: 55px;
+}
+.main-header .vaccine-ad {
+  width: 100%;
+  margin-top: 0.5rem;
+}
+.main-header .actions .header {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.4rem;
+}
+.main-header .actions .header p {
+  font-weight: bold;
+  font-size: 0.87rem;
+}
+.main-header .actions .header a {
+  text-decoration: none;
+  color: #2b70cc;
+  text-transform: uppercase;
+  font-size: 0.74rem;
+  font-weight: bold;
+}
+.main-header .actions .items {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin-top: 1.5rem;
+}
+.main-header .actions .items .item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.main-header .actions .items .item .image {
+  padding: 0.5rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+}
+.main-header .actions .items .item .image img {
+  width: 40px;
+}
+.main-header .actions .items .item p {
+  margin-top: 0.3rem;
+  font-weight: bold;
+  font-size: 0.75rem;
+}
+
+.main-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.3rem 0;
+  background-color: #fff;
+}
+.main-footer .items {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+.main-footer .items .item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.main-footer .items .item img {
+  width: 25px;
+}
+.main-footer .items .item p {
+  font-size: 0.6rem;
+  color: #aaa;
+}
+.main-footer .items .item.active p {
+  display: inline-block;
+  background-color: #2b70cc;
+  color: transparent;
+  line-height: 5px;
+  width: 2rem;
+  border-radius: 1rem;
+  margin-top: 0.1rem;
+}
+.main-footer .items .item.main {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-1.5rem);
+}
+.main-footer .items .item.main .options {
+  position: absolute;
+  bottom: 3.5rem;
+  display: none;
+  flex-direction: column;
+  width: 75vw;
+}
+.main-footer .items .item.main .options button {
+  border: none;
+  background-color: #006fcf;
+  border-radius: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 0.7rem;
+  padding: 0.6rem 0;
+  margin-top: 0.5rem;
+}
+.main-footer .items .item.main .options button img {
+  width: 20px;
+  margin-right: 0.2rem;
+}
+.main-footer .items .item.main .item-content {
+  background-color: #2b70cc;
+  padding: 0.5rem;
+  border-radius: 100%;
+}
+.main-footer .items .item.main .item-content img {
+  width: 30px;
+  display: block;
+}
+
+.modal-vaccine {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.modal-vaccine .header {
+  position: fixed;
+  top: 2rem;
+  left: 0;
+  width: 100%;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.modal-vaccine .header .close {
+  color: #fff;
+  font-size: 2.5rem;
+}
+.modal-vaccine .header .bra {
+  padding: 0.3rem;
+  background-color: #fff;
+  border-radius: 10rem;
+  height: 2rem;
+}
+.modal-vaccine .header .pdf {
+  padding: 0.2rem;
+  background-color: #fff;
+  border-radius: 0.3rem;
+  height: 2rem;
+}
+.modal-vaccine .content {
+  padding: 1rem 1rem 2rem;
+  font-size: 0.6rem;
+  width: 250px;
+  margin: 7rem auto 0;
+  border-radius: 1rem;
+  background-image: url(./images/logo-bra.jpeg);
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: 50% 25%;
+  background-color: #f9fbfc;
+  z-index: 3;
+}
+.modal-vaccine .content .background {
+  width: calc(100% + 2rem);
+  border-radius: 1rem 1rem 0 0;
+  margin: -1rem -1rem 1rem -1rem;
+}
+.modal-vaccine .content h2 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+.modal-vaccine .content strong {
+  display: inline-block;
+  margin-top: 0.1rem;
+}
+.modal-vaccine .content .flex {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.modal-vaccine .content .vaccine {
+  border: 1px solid #f5d04b;
+  padding: 0.4rem;
+  margin-top: 0.3rem;
+  border-radius: 0.3rem;
+}
+
+/*# sourceMappingURL=style.css.map */
